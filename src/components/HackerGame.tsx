@@ -6,7 +6,7 @@ export const HackerGame = () => {
   const [gameState, setGameState] = useState<'idle' | 'playing' | 'won' | 'failed'>('idle')
   const [sequence, setSequence] = useState<string[]>([])
   const [userInput, setUserInput] = useState<string[]>([])
-  const [timeLeft, setTimeLeft] = useState(30) // Increased time for better experience
+  const [timeLeft, setTimeLeft] = useState(15) // Reduced time for challenge
   const [hackingProgress, setHackingProgress] = useState(0)
 
   const generateSequence = useCallback(() => {
@@ -18,7 +18,7 @@ export const HackerGame = () => {
     const newSeq = generateSequence()
     setSequence(newSeq)
     setUserInput([])
-    setTimeLeft(30)
+    setTimeLeft(15)
     setHackingProgress(0)
     setGameState('playing')
   }
