@@ -8,11 +8,10 @@ export const HackerGame = () => {
   const [userInput, setUserInput] = useState<string[]>([])
   const [timeLeft, setTimeLeft] = useState(30) // Increased time for better experience
   const [hackingProgress, setHackingProgress] = useState(0)
-  const [isShaking, setIsShaking] = useState(false)
 
   const generateSequence = useCallback(() => {
-    const chars = ['0', '1', 'F', 'X', 'A', '#', '!', '?', 'K', 'M']
-    return Array.from({ length: 6 }, () => chars[Math.floor(Math.random() * chars.length)])
+    const chars = ['0', '1', 'F', 'X', 'A', '#']
+    return Array.from({ length: 4 }, () => chars[Math.floor(Math.random() * chars.length)])
   }, [])
 
   const startGame = () => {
@@ -22,7 +21,6 @@ export const HackerGame = () => {
     setTimeLeft(30)
     setHackingProgress(0)
     setGameState('playing')
-    setIsShaking(false)
   }
 
   useEffect(() => {
@@ -49,8 +47,6 @@ export const HackerGame = () => {
         setTimeout(() => setGameState('idle'), 4000)
       }
     } else {
-      setIsShaking(true)
-      setTimeout(() => setIsShaking(false), 500)
       setUserInput([])
       setHackingProgress(0)
     }
@@ -59,12 +55,34 @@ export const HackerGame = () => {
   return (
     <div className="w-full max-w-5xl mx-auto py-24 px-4">
       <motion.div 
-        animate={isShaking ? { x: [-10, 10, -10, 10, 0], transition: { duration: 0.4 } } : {}}
         className="bg-slate-950 border-2 border-emerald-500/30 rounded-[2.5rem] p-8 md:p-12 shadow-[0_0_50px_rgba(16,185,129,0.1)] relative overflow-hidden group"
       >
         {/* Animated Background Grid */}
         <div className="absolute inset-0 opacity-5 pointer-events-none bg-[linear-gradient(rgba(16,185,129,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,0.2)_1px,transparent_1px)] bg-[size:40px_40px]" />
         
+        {/* Win Animation Overlay */}
+        <AnimatePresence>
+          {gameState === 'won' && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 z-50 flex items-center justify-center bg-emerald-500/10 backdrop-blur-sm pointer-events-none"
+            >
+              <motion.div
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ type: "spring", damping: 12, stiffness: 100 }}
+                className="bg-slate-950 border-4 border-emerald-500 rounded-full p-12 shadow-[0_0_100px_rgba(16,185,129,0.5)]"
+              >
+                <Unlock size={80} className="text-emerald-500" />
+              </motion.div>
+              {/* Particles/Scanlines effect */}
+              <div className="absolute inset-0 bg-[linear-gradient(rgba(16,185,129,0.1)_1px,transparent_1px)] bg-[size:100%_4px] animate-pulse" />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-8 relative z-10">
           <div>
             <div className="flex items-center gap-3 mb-2">
@@ -134,8 +152,8 @@ export const HackerGame = () => {
               ))}
             </div>
 
-            <div className="grid grid-cols-5 md:grid-cols-10 gap-3">
-              {['0', '1', 'F', 'X', 'A', '#', '!', '?', 'K', 'M'].map((char) => (
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+              {['0', '1', 'F', 'X', 'A', '#'].map((char) => (
                 <button
                   key={char}
                   onClick={() => handleInput(char)}
