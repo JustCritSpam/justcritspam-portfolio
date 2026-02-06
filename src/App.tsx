@@ -4,6 +4,7 @@ import { Contact } from './components/Contact'
 import { AudioPlayer } from './components/AudioPlayer'
 import { HackerGame } from './components/HackerGame'
 import { Header } from './components/Header'
+import { Dossier } from './components/Dossier'
 import { motion } from 'framer-motion'
 import { Code2, Globe, Database, Cpu, ExternalLink, Github } from 'lucide-react'
 
@@ -101,6 +102,8 @@ function App() {
       <Hero />
       
       <TechStack />
+
+      <Dossier />
 
       {/* Sviluppo Plugin Section */}
       <section id="plugins" className="py-32 px-4 max-w-7xl mx-auto">
