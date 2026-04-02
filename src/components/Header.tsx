@@ -21,6 +21,7 @@ export const Header = () => {
         <nav className="hidden md:flex items-center gap-8 font-mono text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">
           <a href="#" className="hover:text-emerald-400 transition-colors">Home</a>
           <a href="#plugins" className="hover:text-emerald-400 transition-colors">Plugins</a>
+          <a href="#commissiona" className="hover:text-emerald-400 transition-colors">Commissiona</a>
           <a href="#contact" className="hover:text-emerald-400 transition-colors">Contact</a>
         </nav>
 
