@@ -5,15 +5,17 @@ import { AudioPlayer } from './components/AudioPlayer'
 import { HackerGame } from './components/HackerGame'
 import { Header } from './components/Header'
 import { Dossier } from './components/Dossier'
-import { TaskSubmit } from './components/TaskSubmit'
 import { AdminDashboard } from './components/AdminDashboard'
+import { QueuePage } from './components/QueuePage'
 import { motion } from 'framer-motion'
 import { Code2, Globe, Database, Cpu, ExternalLink, Github } from 'lucide-react'
 
 const isAdmin = window.location.pathname === '/admin'
+const isQueue = window.location.pathname === '/queue'
 
 function App() {
   if (isAdmin) return <AdminDashboard />
+  if (isQueue) return <QueuePage />
   const projects = [
     {
       title: 'AuraTournament',
@@ -293,8 +295,6 @@ function App() {
           ))}
         </div>
       </section>
-
-      <TaskSubmit />
 
       <Contact />
 
