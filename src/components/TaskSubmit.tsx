@@ -46,31 +46,14 @@ export function TaskSubmit() {
     <section id="commissiona" className="py-32 px-4 max-w-7xl mx-auto">
       <div className="flex flex-col lg:flex-row gap-16 items-start">
         <div className="lg:w-2/5">
-          <h2 className="text-sm uppercase tracking-[0.3em] text-emerald-500 font-bold mb-4">Open Queue</h2>
+          <h2 className="text-sm uppercase tracking-[0.3em] text-emerald-500 font-bold mb-4">Staff Queue</h2>
           <h3 className="text-5xl md:text-6xl font-black tracking-tighter text-white mb-8 leading-none">
-            Hai qualcosa<br/>in mente?
+            Mandami<br/>un task.
           </h3>
           <div className="space-y-5 text-slate-400 text-lg font-light leading-relaxed">
             <p>
-              Lasciami un task con il tuo nome, la descrizione e la priorità.
-              Lo vedrò direttamente nella mia dashboard e ti risponderò su Discord.
+              Scrivi il tuo nome, cosa devo fare e la priorità. Lo vedo direttamente nella mia dashboard così non mi scordo niente.
             </p>
-            <p>
-              <span className="text-emerald-400 font-medium">Nessuna registrazione</span> richiesta — solo scrivi cosa ti serve.
-            </p>
-          </div>
-
-          <div className="mt-10 space-y-4">
-            {[
-              { label: 'Risposta media', value: '< 24h' },
-              { label: 'Contatto', value: 'Discord DM' },
-              { label: 'Disponibilità', value: 'Plugin, Web, Consulting' },
-            ].map((item, i) => (
-              <div key={i} className="p-4 bg-white/5 border border-white/5 rounded-xl">
-                <p className="text-xs uppercase tracking-widest text-emerald-500 font-bold mb-1">{item.label}</p>
-                <p className="text-white font-bold">{item.value}</p>
-              </div>
-            ))}
           </div>
         </div>
 
