@@ -29,7 +29,7 @@ export const translations = {
       subtitle: 'Le mie esperienze passate e i progetti su cui ho lavorato.',
       items: [
         {
-          date: 'Apr 2023',
+          date: 'Gen 2026',
           company: 'AuraMC Network',
           role: 'Core Developer',
           tech: ['java', 'kotlin', 'spigot', 'paper', 'velocity', 'postgres', 'redis', 'mongo', 'linux'],
@@ -44,7 +44,7 @@ export const translations = {
           ],
         },
         {
-          date: 'Set 2021',
+          date: 'Set 2024',
           company: 'Digital Developer',
           role: 'Freelance · Web & Social Media',
           tech: ['react', 'nextjs', 'typescript', 'tailwind', 'node', 'html', 'css', 'figma', 'seo', 'social'],
@@ -59,7 +59,7 @@ export const translations = {
           ],
         },
         {
-          date: 'Mar 2020',
+          date: 'Mar 2023',
           company: 'Lavori Personali',
           role: 'Plugin & Tooling Open Source',
           tech: ['java', 'kotlin', 'go', 'grpc', 'react', 'postgres', 'mysql'],
@@ -73,7 +73,7 @@ export const translations = {
           ],
         },
         {
-          date: 'Gen 2018',
+          date: 'Gen 2021',
           company: 'Self-taught',
           role: 'Da curioso a developer',
           tech: ['java', 'html', 'css', 'javascript'],
@@ -138,7 +138,7 @@ export const translations = {
       subtitle: 'These are my past work experiences and projects I have worked on.',
       items: [
         {
-          date: 'Apr 2023',
+          date: 'Jan 2026',
           company: 'AuraMC Network',
           role: 'Core Developer',
           tech: ['java', 'kotlin', 'spigot', 'paper', 'velocity', 'postgres', 'redis', 'mongo', 'linux'],
@@ -153,7 +153,7 @@ export const translations = {
           ],
         },
         {
-          date: 'Sep 2021',
+          date: 'Sep 2024',
           company: 'Digital Developer',
           role: 'Freelance · Web & Social Media',
           tech: ['react', 'nextjs', 'typescript', 'tailwind', 'node', 'html', 'css', 'figma', 'seo', 'social'],
@@ -168,7 +168,7 @@ export const translations = {
           ],
         },
         {
-          date: 'Mar 2020',
+          date: 'Mar 2023',
           company: 'Personal Work',
           role: 'Open Source Plugins & Tooling',
           tech: ['java', 'kotlin', 'go', 'grpc', 'react', 'postgres', 'mysql'],
@@ -182,7 +182,7 @@ export const translations = {
           ],
         },
         {
-          date: 'Jan 2018',
+          date: 'Jan 2021',
           company: 'Self-taught',
           role: 'From curious to developer',
           tech: ['java', 'html', 'css', 'javascript'],
